@@ -8,6 +8,70 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.button-open-modal {
+				display: inline-block;
+				margin: 10px;
+				padding: 10px 20px;
+				background-color: #0056b3;
+				color: white;
+				text-align: center;
+				border: none;
+				border-radius: 25px; /* Makes the button rounder */
+				font-size: 16px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+		
+			.button-open-modal:hover {
+				background-color: #003f7f; /* Darker shade on hover */
+			}
+		
+			.modal {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 1000;
+			}
+		
+			.modal-content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: #fff;
+				padding: 20px;
+				width: 80%;
+				max-width: 800px;
+				max-height: 800px;
+				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+			}
+		
+			.modal-close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: #ff5c5c;
+				border: none;
+				border-radius: 50%;
+				width: 25px;
+				height: 25px;
+				font-size: 14px;
+				color: white;
+				cursor: pointer;
+			}
+		
+			.modal-close:hover {
+				background: #d93434;
+			}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -53,47 +117,48 @@
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="https://github.com/Samarball1/privatePortfolio" target = "_blank" class="hover-image"><img src="images/gitLogo.png" alt="" style="width: 100%;"/></a>
-								<h3>Git-Version Control</h3>
-								<p><a href="https://cs61bl.org/su24/projects/gitlet/#overview" target=blank_>Project Scope</a></p><br>
-								<p>____Java____</p><br>
+								<h3>Git-Version Control (Java)</h3>
+								<p><a href="https://cs61bl.org/su24/projects/gitlet/#overview" target=blank_>Project Scope</a>
+									<p><button class="button-open-modal" data-modal="modal1">Read More</button> <br></p>
 							</article>
+
+
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="Bloomberg.pdf" target = "_blank" class="hover-image"><img src="images/bloomberPic.png" alt=""style="width: 100%;" /></a>
-								<h3>Bloomberg Sentiment Analysis</h3>
+								<h3>Bloomberg Sentiment Analysis (Python)</h3>
 								<p><a href = "https://github.com/Samarball1/portfolio/blob/main/EmailClassifier/Email_Classifier.ipynb" target="_blank" style="font-weight: bold;"> Github </a> <br>
 								NLP Models, Regex, Python (Pandas, Seaborn)</p>
 							</article>
 
 		
-
 							<article class="col-6 col-12-large work-item">
 								<a href="https://samarsinghportfolio.my.canva.site/site-navigation-instructions" target = "_blank" class="hover-image"><img src="images/united.jpeg" alt="" style="width: 100%;"/></a>
-								<h3>United Centralized Platform (Sample)</h3>
+								<h3>United Centralized Platform (Power BI, Power Platforms)</h3>
 								<p>
 									Rennovated Website, Embedded Performance Dashboards, Automation Features</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="hover-image"><img src="images/housingphoto.png" alt="" style="width: 100%;"/></a>
-								<h3>Housing Prices Predictor</h3>
-								<p>___________</p>
+								<h3>Housing Prices Predictor (Python)</h3>
+								<p><button class="button-open-modal" data-modal="modal1">Read More</button> </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="nba.pdf" target = "_blank" class = "hover-image"><img src="images/nba_logo.jpeg" alt="" style="width: 100%;"/></a>
 			
-								<h3>NBA Performance Analysis: <br> Player Specs, Colleges,....</h3>
+								<h3>NBA Performance Analysis (Python): <br> Player Specs, Colleges,....</h3>
 								<p>Python (Pandas, numpy, plotly) <br> 
 									<a href = "https://github.com/Samarball1/portfolio/tree/main/nbaAnalysis" target="_blank" style="font-weight: bold;"> Github </a></p>
 							</article>
 						
 							<article class="col-6 col-12-xsmall work-item">
-					
-								<a href="Email_Classifier.pdf" target="_blank" class="hover-image"><img src="images/classifying.png" alt="" style="width: 100%;"/></a>
-							
-								<h3>Email Classifier</h3>
-								<p><strong>Python: </strong> skLearn(Logistic Regression, PCA, OneHotEncoder), Pandas, Seaborn <br> 
-									<a href="Email_Classifier.pdf" target="_blank" class = "oval-link" style="text-decoration-color:none; font-weight: bold;"> Open Project (PDF)</a> <br>
-								 <a href = "https://github.com/Samarball1/portfolio/blob/main/EmailClassifier/Email_Classifier.ipynb" target="_blank" style="font-weight: bold;"> Github </a>
-								 <a href="https://samarsinghportfolio.my.canva.site/site-navigation-instructions" class="icon brands fa-github"><span class="label">Github</span></a>
+								<a href="Email_Classifier.pdf" target="_blank" class="hover-image">
+									<img src="images/classifying.png" alt="" style="width: 100%;" />
+								</a>
+								<h3>Email Classifier (Python)</h3>
+								<p>
+									<strong>Python: </strong> skLearn(Logistic Regression, PCA, OneHotEncoder), Pandas, Seaborn<br />
+									<button class="button-open-modal" data-modal="modal1">Read More</button> <br>
+									<a href="https://github.com/Samarball1/portfolio/blob/main/EmailClassifier/Email_Classifier.ipynb" target = "_blank" class="icon brands fa-github"><span class="label">Github</span></a>
 								</p>
 							</article>
 							
@@ -114,7 +179,7 @@
 
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="https://github.com/Samarball1/portfolio/tree/main/flappyBird" target = "_blank" class = "hover-image"><img src="images/flappybird.png" alt="" style="width: 100%;"/></a>
-								<h3>Flappy Bird <br><strong>Java</strong></h3>
+								<h3>Flappy Bird (JAVA) <br><strong>Java</strong></h3>
 								<p>Python (Pandas, numpy, plotly)</p>
 							</article>
 						
@@ -122,7 +187,7 @@
 					
 								<a href="Email_Classifier.pdf" target="_blank" class="hover-image"><img src="images/2DMap.png" alt="" style="width: 100%;"/></a>
 							
-								<h3>Random 2D Map Generator (Game)</h3>
+								<h3>Random 2D Map Generator (Java))</h3>
 								<p><strong>Python: </strong> skLearn(Logistic Regression, PCA, OneHotEncoder), Pandas, Seaborn <br> 
 									<a href="Email_Classifier.pdf" target="_blank" class = "oval-link" style="text-decoration-color:none; font-weight: bold;"> Open Project (PDF)</a> <br>
 								 <a href = "https://github.com/Samarball1/portfolio/blob/main/EmailClassifier/Email_Classifier.ipynb" target="_blank" style="font-weight: bold;"> Github </a>
@@ -513,6 +578,36 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				-->
 
 			</div>
+			<div class="modal" id="modal1">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h2>Email Classifier</h2>
+					<p>
+					This project demonstrates the use of Python for building an Email Classifier. Key libraries include
+                    skLearn for Logistic Regression and PCA, Pandas for data manipulation, and Seaborn for visualization.
+                    The project explores feature engineering, dimensionality reduction, and model evaluation to achieve
+                    robust email classification. Check out the links for a detailed overview.
+					</p>
+				</div>
+			</div>
+			<div class="modal" id="modal2">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h2>Bloomberg Sentiment Analysis</h2>
+					<p>
+						This project focuses on sentiment analysis using NLP models and regex...
+					</p>
+				</div>
+			</div>
+			<div class="modal" id="modal3">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h2>Housing Prices Predictor</h2>
+					<p>
+						This project uses advanced regression models to predict housing prices...
+					</p>
+				</div>
+			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -530,6 +625,30 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</footer>
 
 		<!-- Scripts -->
+		<script>
+			const buttons = document.querySelectorAll(".button-open-modal");
+			const modals = document.querySelectorAll(".modal");
+			const closeButtons = document.querySelectorAll(".modal-close");
+		
+			buttons.forEach(button => {
+				button.addEventListener("click", () => {
+					const modalId = button.getAttribute("data-modal");
+					document.getElementById(modalId).style.display = "block";
+				});
+			});
+		
+			closeButtons.forEach(close => {
+				close.addEventListener("click", () => {
+					close.parentElement.parentElement.style.display = "none";
+				});
+			});
+		
+			window.addEventListener("click", (event) => {
+				if (event.target.classList.contains("modal")) {
+					event.target.style.display = "none";
+				}
+			});
+		</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
